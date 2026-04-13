@@ -1,0 +1,23 @@
+name: CobbleGenerators
+description: $description
+prefix: CobbleGenerators
+version: '${version}'
+
+main: pl.cramber.cobbleGenerators.CobbleGenerators
+api-version: '1.21'
+load: POSTWORLD
+folia-supported: true
+
+authors: [ Cramber ]
+website: https://github.com/Cramber25/CobbleGenerators
+
+commands:
+  cobblegen:
+    description: Manage cobble generators
+    permission: cobblegenerators.admin
+    usage: /cobblegen <give|reload|enable|disable> [player]
+
+permissions:
+  cobblegenerators.admin:
+    description: Allows management of generators
+    default: op
