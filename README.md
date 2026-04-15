@@ -1,19 +1,22 @@
-# Cobble Generators
+# CobbleGenerators
 
-This is a super simple plugin which modifies the properties of cobblestone generators, perfect for SkyBlock servers.
+CobbleGenerators gives you full control over what spawns from cobblestone generators. It’s an essential utility for SkyBlock or EasyHC servers where you want players to farm ores without leaving their bases/islands.
 
-## Features:
-- Modify the blocks that can generate from a cobble generator
-- Optional setting to leave vanilla generators as they were, and create a custom generator block
-- Destroy custom generators with a special tool
-- Modify plugin messages
+You can configure it to globally override all vanilla lava/water generators, or give players a physical "Custom Generator" block they can place down.
 
-## Commands:
-- /cobblegen give (`cobblegenerators.admin`)
-- /cobblegen reload (`cobblegenerators.admin`)
-- /cobblegen enable/disable (`cobblegenerators.admin`)
+## Features
+* **Weight-Based Drops:** Set exact percentage chances for different ores and blocks to spawn.
+* **Two Generation Modes:** `NATURAL`: Automatically applies your custom drops to every standard cobblestone generator in the world. `CUSTOM_BLOCK`: Leaves vanilla generators alone, and instead uses a custom placeable block that generates the ores.
+* **Safe Breaking:** If you use the custom block mode, you can set a specific tool required to break the generator so players don't accidentally destroy it.
+* **Live Reloading:** Tweak your drop weights and update them in-game using `/cobblegen reload` without restarting the server.
+* **Custom Messages:** Fully translate the plugin using MiniMessage formatting.
 
-## Config:
+## Commands & Permissions
+* `/cobblegen give <player>` - Give a custom generator block to a player. *(Permission: `cobblegenerators.admin`)*
+* `/cobblegen enable/disable` - Toggle the custom generators on or off. *(Permission: `cobblegenerators.admin`)*
+* `/cobblegen reload` - Reload the config and drop weights. *(Permission: `cobblegenerators.admin`)*
+
+## Configuration (config.yml)
 ```yaml
 mode: "NATURAL" # can be "NATURAL" or "CUSTOM_BLOCK"
 
