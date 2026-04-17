@@ -12,6 +12,10 @@ public final class CobbleGenerators extends JavaPlugin {
         getConfig().options().copyDefaults(true);
         saveConfig();
 
+        // bStats
+        int pluginId = 30800;
+        Metrics metrics = new Metrics(this, pluginId);
+
         dataManager = new DataManager(this);
         weightManager = new WeightManager(this);
 
