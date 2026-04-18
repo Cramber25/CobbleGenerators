@@ -28,7 +28,7 @@ public class GeneratorListener implements Listener {
             return;
         }
 
-        if (event.getNewState().getType() == Material.COBBLESTONE || event.getNewState().getType() == Material.STONE) {
+        if (event.getNewState().getType() == Material.COBBLESTONE) {
             Material nextMat = plugin.getWeightManager().getRandomMaterial();
             event.getNewState().setType(nextMat);
         }
